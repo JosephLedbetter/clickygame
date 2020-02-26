@@ -12,3 +12,8 @@
   font-size: 3em;
   text-decoration: underline;
 }
+
+.App-intro {
+  margin-top: 20px;
+  font-size: larger;
+}
