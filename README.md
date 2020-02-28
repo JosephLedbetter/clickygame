@@ -5,10 +5,10 @@
   <li>Puppy live is an application where users click images of puppies in order to earn points. You win the game whenever you have clicked all 9 of the puppies, without clicking the same one twice. The only catch is that the puppies move in their location with every click... </li>
 </ul>
 
-<h3>Technologies used in the project:</h3>
+<h3>Programs used in the project:</h3>
 <ul>
   <li>React.js</li>
-  <li>Bootstrap-</li>
+  <li>Bootstrap</li>
 </ul>
 
 <h2>Code</h2>
@@ -28,4 +28,3 @@
     <p>The Wrapper component wraps includes the entire card component.</p>
   </li>
 </ul>
-<p>I opted for no separate header component.</p>
