@@ -2,7 +2,7 @@
 
 <h2>Overview</h2>
 <ul>
-  <li>Puppy live is an application where users click images of puppies in order to earn points. You win the game whenever you have clicked all 9 of the puppies, without clicking the same one twice. The only catch is that the puppies move in their location with every click... </li>
+  <li>Puppy Love is an application where users click images of puppies in order to earn points. You win the game whenever you have clicked all 9 of the puppies, without clicking the same one twice. The only catch is that the puppies move in their location with every click... </li>
 </ul>
 
 <h3>Programs used in the project:</h3>
