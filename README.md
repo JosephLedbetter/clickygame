@@ -18,7 +18,7 @@
 <p>After altering two things in the index.html page: the title of my app and include a Bootstrap CDN link. The bulk of the code for this app was done in the src/components directory. I felt using three components for the app..</p>
 <h4>Pieces</h4>
 <ul>
-  <li>Card - The card component is where all puppy images are displayed.
+  <li>Card - The card component is where all characters images are displayed.
   </li>
   <li>Score - The score component displays the score.
   </li>
