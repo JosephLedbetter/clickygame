@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .gameScore {
   text-align: center;
   height: 70px;
@@ -5,11 +6,22 @@
   line-height: 1em;
   padding: 0;
   margin: 0;
+=======
+.score {
+    padding: 20px;
+    font-family: 'Comfortaa', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.6rem;
+    text-align: center;
+>>>>>>> 9a1a508f57d8a7591ade4d9f372d9d93bb7f8269
 }
-div.gameScore {
 
+@media (max-width: 960px) {
+    .score {
+        font-size: 1.4rem;
+    } 
 }
 
+<<<<<<< HEAD
 h3.score {
   margin-top: 5px;
   padding: 0;
@@ -20,3 +32,10 @@ h3.status{
   padding: 0;
   color: red;
 }
+=======
+@media (max-width: 620px) {
+    .score {
+        font-size: 1.2rem;
+    } 
+}
+>>>>>>> 9a1a508f57d8a7591ade4d9f372d9d93bb7f8269

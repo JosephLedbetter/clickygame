@@ -1,48 +1,77 @@
-import React, { Component } from "react";
-import Card from "./components/Card";
-import Wrapper from "./components/Wrapper";
+import React, { Component } from 'react';
+import GridMDC from "./components/GridMDC";
+import PaperMDC from "./components/PaperMDC";
+import CharCard from "./components/CharCard";
 import Score from "./components/Score";
-import pups from "./cards.json";
-import "./App.css";
+import Alert from "./components/Alert";
+import NavBar from "./components/NavBar";
+import BottomNavMDC from "./components/BottomNavMDC";
+import characters from "./characters.json";
 
 class App extends Component {
-  // Setting this.state.pups to the cards json array
+
   state = {
-    pups,
-    clickedPuppyIds: [],
-    score: 0,
-    goal: 8,
-    status: ""
-  };
+    characters: characters,
+    pickedChars: [],
+    topScore: 0,
+    alertMessage: ""
+  }
 
-  //shuffle the pup cards in the browser when clicked
-  shuffleScoreCard = id => {
-    let clickedPuppyIds = this.state.clickedPuppyIds;
+  handlePicked = event => {
 
-    if(clickedPuppyIds.includes(id)){
-      this.setState({ clickedPuppyIds: [], score: 0, status:  "Game Over! You lost. Click to play again!" });
-      return;
-    }else{
-      clickedPuppyIds.push(id)
+    const name = event.target.attributes.getNamedItem("name").value;
+    this.shuffleCharacters()
+    this.checkGuess(name, this.updateTopScore)
+  }
 
-      if(clickedPuppyIds.length === 8){
-        this.setState({score: 8, status: "You Won! Great Job, Smartie! Click to play again!", clickedPuppyIds: []});
-        console.log('You Win');
-        return;
-      }
+  shuffleCharacters = () => {
+    this.setState(this.state.characters = this.shuffleArray(this.state.characters))
+  }
 
-      this.setState({ pups, clickedPuppyIds, score: clickedPuppyIds.length, status: " " });
+  shuffleArray = (a) => {
+    var j, x, i;
+    for (i = a.length - 1; i > 0; i--) {
+      j = Math.floor(Math.random() * (i + 1));
+      x = a[i];
+      a[i] = a[j];
+      a[j] = x;
+    }
+    return a;
+  }
 
-      for (let i = pups.length - 1; i > 0; i--) {
-        let j = Math.floor(Math.random() * (i + 1));
-        [pups[i], pups[j]] = [pups[j], pups[i]];
-      }
+  checkGuess = (name, cb) => {
+    const newState = { ...this.state };
+    if (newState.pickedChars.includes(name)) {
+      newState.alertMessage = `YOU ALREADY PICKED "${name.toUpperCase()}"!`
+      newState.pickedChars = []
+      this.setState(this.state = newState)
+    } else {
+      newState.pickedChars.push(name)
+      newState.alertMessage = `GOOD CHOICE!`
+      this.setState(this.state = newState)
+    }
+    cb(newState, this.alertWinner)
+  }
+
+  updateTopScore = (newState, cb) => {
+    if (newState.pickedChars.length > newState.topScore) {
+      newState.topScore++
+      this.setState(this.state = newState)
+    }
+    cb(newState)
+  }
+
+  alertWinner = (newState) => {
+    if (newState.pickedChars.length === 12) {
+      newState.alertMessage = "CHAMPION!";
+      newState.pickedChars = [];
+      this.setState(this.state = newState)
     }
   }
 
-  // Map over this.state.cards and render a Card component for each card object
   render() {
     return (
+<<<<<<< HEAD
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">The Clickster</h1>
@@ -61,8 +90,54 @@ class App extends Component {
               id={puppy.id}
               key={puppy.id}
               image={puppy.image}
+=======
+      <div>
+        <NavBar style={{ background: "#313133", marginBottom: "5px" }} />
+
+        <GridMDC container direction="column" style={{ margin: "0 auto", maxWidth: 945 }}>
+
+          <GridMDC item lg={12}>
+            <PaperMDC>
+              {this.state.alertMessage === "GOOD CHOICE!" ? (
+                <Alert message={this.state.alertMessage} style={{ color: "green" }} />
+              ) : (
+                  <Alert message={this.state.alertMessage} style={{ color: "red" }} />
+                )}
+            </PaperMDC>
+          </GridMDC>
+
+          <GridMDC container justify="space-between">
+
+            <GridMDC item lg={6} md={6} sm={12} xs={12}>
+              <PaperMDC>
+                <Score type="Score" score={this.state.pickedChars.length} />
+              </PaperMDC>
+            </GridMDC>
+
+            <GridMDC item lg={6} md={6} sm={12} xs={12}>
+              <PaperMDC>
+                <Score type="Top Score" score={this.state.topScore} />
+              </PaperMDC>
+            </GridMDC>
+
+          </GridMDC>
+
+        </GridMDC>
+
+        <GridMDC container spacing={24} justify="center" style={{ maxWidth: 945, margin: "0 auto" }}>
+          {this.state.characters.map(char => (
+            <GridMDC item lg={3} md={3} sm={4} xs={6}>
+            <CharCard
+              id={char.id}
+              name={char.name}
+              image={char.image}
+              key={char.id}
+              handlePicked={this.handlePicked}
+>>>>>>> 9a1a508f57d8a7591ade4d9f372d9d93bb7f8269
             />
+            </GridMDC>
           ))}
+<<<<<<< HEAD
         </Wrapper>
         <footer>
           <p>Designed and built by Heather Mathies. You can find the
@@ -70,6 +145,15 @@ class App extends Component {
         </footer>
     </div>
     );
+=======
+        </GridMDC>
+        <BottomNavMDC style={{ background: "#313133", marginTop: "17.5px", paddingTop: "15px", borderTop: "2.5px solid slategray" }}>
+          <a href="https://github.com/philiptd5000/clicky-game-REACT" target="_blank" className="link" alt="clicky-game-github-link"><i className="fa fa-github fa-2x"></i></a>
+        </BottomNavMDC>
+
+      </div>
+    )
+>>>>>>> 9a1a508f57d8a7591ade4d9f372d9d93bb7f8269
   }
 }
 
