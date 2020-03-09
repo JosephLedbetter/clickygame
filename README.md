@@ -26,4 +26,4 @@
   </li>
 </ul>
 
-## [Click to sample the applciation](https://arcane-bayou-52504.herokuapp.com/)
+## [Click to sample the application](https://arcane-bayou-52504.herokuapp.com/)
