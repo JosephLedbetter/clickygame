@@ -2,7 +2,7 @@
 
 <h2>Overview</h2>
 <ul>
-  <liGame of thrones mathing game is an application where users click images of characters in order to earn points. You win the game whenever you have clicked all 12 characters, without clicking the same one twice. The only catch is that the characters move their location on every click... </li>
+  <li>Game of thrones mathing game is an application where users click images of characters in order to earn points. You win the game whenever you have clicked all 12 characters, without clicking the same one twice. The only catch is that the characters move their location on every click... </li>
 </ul>
 
 <h3>Programs used in the project:</h3>
