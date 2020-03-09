@@ -1,8 +1,8 @@
-<h1>Puppy Love!<h1>
+<h1>Game of Thrones Click Game<h1>
 
 <h2>Overview</h2>
 <ul>
-  <li>Puppy Love is an application where users click images of puppies in order to earn points. You win the game whenever you have clicked all 9 of the puppies, without clicking the same one twice. The only catch is that the puppies move in their location with every click... </li>
+  <liGame of thrones mathing game is an application where users click images of characters in order to earn points. You win the game whenever you have clicked all 12 characters, without clicking the same one twice. The only catch is that the characters move their location on every click... </li>
 </ul>
 
 <h3>Programs used in the project:</h3>
