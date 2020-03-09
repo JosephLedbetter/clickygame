@@ -47,7 +47,7 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Puppy Love</h1>
           <p className="App-intro">
-            I know is hard, but try not to click the same pup twice!
+            We know they're adorable, but try not to click the same photo twice!
           </p>
         </header>
         <Score total={this.state.score}
