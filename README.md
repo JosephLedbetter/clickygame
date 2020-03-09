@@ -26,4 +26,4 @@
   </li>
 </ul>
 
-<h3 href="https://arcane-bayou-52504.herokuapp.com/"> Click to sampple the game</h3>
+## [Click to sample the applciation](https://arcane-bayou-52504.herokuapp.com/)
