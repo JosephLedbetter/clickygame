@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-# Clicky-Game (React.js)
-
 <h1>Game of Thrones Click Game<h1>
 
 <h2>Overview</h2>
@@ -31,4 +27,3 @@
 </ul>
 
 ## [Click to sample the applciation](https://arcane-bayou-52504.herokuapp.com/)
->>>>>>> ca2470ae8c6dbf42b378db1b4e8e0ccbf0566a44
